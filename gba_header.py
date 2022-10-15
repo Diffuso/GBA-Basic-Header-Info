@@ -1,5 +1,5 @@
 # GBA Basic Header Info
-version = 0.2
+version = 0.3
 
 import re
 import sys
@@ -34,7 +34,7 @@ else:
                     # Check if there is info on the header
                     # if not, print error message
                     if len(rom_header) <= 0:
-                        print(Fore.LIGHTRED_EX + f"[X] Error. ROM {sys.argv[rom]} not licensed.")
+                        print(Fore.LIGHTRED_EX + f"[X] Error. Invalid ROM ({sys.argv[rom]}) or not licensed.")
                     else:
                     # Get internal name
                         internal_name = rom_header[0].decode()[:-6]
